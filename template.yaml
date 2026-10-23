@@ -6,7 +6,7 @@ sectores: [tienda, restaurante, taller]
 secciones: [hero, servicios, galeria, horario-ubicacion, testimonios, contacto]
 estilo: calido
 plan_minimo: gratis
-version: 1.1.0
+version: 1.2.0
 base: astrowind
 demo_url: https://demo-plantilla-negocio-local.noexpertise.com
 activa: true
