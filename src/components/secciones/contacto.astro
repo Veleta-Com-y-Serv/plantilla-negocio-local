@@ -1,0 +1,46 @@
+---
+// Contacto: botones grandes de teléfono y WhatsApp primero (es lo que más se usa) y formulario después.
+import { seccion, site, tel, whatsapp } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+import FormularioContacto from '../ui/FormularioContacto.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="grid gap-10 md:grid-cols-5">
+        <div class="md:col-span-2">
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <div class="grid gap-3">
+            {c.telefono && (
+              <a href={tel(c.telefono)} class="tarjeta flex items-center gap-4 p-5 no-underline">
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-primario text-white"><Icono nombre="telefono" /></span>
+                <span><span class="block text-sm opacity-70">Llámanos</span><span class="text-xl font-extrabold">{c.telefono}</span></span>
+              </a>
+            )}
+            {c.whatsapp && (
+              <a href={whatsapp(c.whatsapp, 'Hola, os escribo desde la web')} rel="noopener" target="_blank" class="tarjeta flex items-center gap-4 p-5">
+                <span class="grid h-12 w-12 place-items-center rounded-full bg-[#25d366] text-white"><Icono nombre="whatsapp" /></span>
+                <span><span class="block text-sm opacity-70">Escríbenos por WhatsApp</span><span class="text-xl font-extrabold">{c.whatsapp}</span></span>
+              </a>
+            )}
+            {c.email && (
+              <a href={`mailto:${c.email}`} class="tarjeta flex items-center gap-4 p-5">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-acento"><Icono nombre="correo" /></span>
+                <span class="min-w-0"><span class="block text-sm opacity-70">Email</span><span class="block break-words font-bold">{c.email}</span></span>
+              </a>
+            )}
+          </div>
+        </div>
+        <div class="tarjeta p-6 md:col-span-3 md:p-10">
+          <FormularioContacto boton="Enviar" />
+        </div>
+      </div>
+    </Seccion>
+  )
+}

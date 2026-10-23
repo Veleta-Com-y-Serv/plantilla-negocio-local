@@ -1,0 +1,50 @@
+---
+// Hero cálido: foto grande redondeada, tarjeta de bienvenida que la solapa y botones de llamar / cómo llegar.
+import { seccion, site, tel, mapa } from '../../data/site';
+import Imagen from '../ui/Imagen.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string; primera?: boolean }
+const { id, primera = false } = Astro.props;
+const s = seccion(id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <section id={id} class="pt-4 pb-12 md:pt-8 md:pb-20">
+      <div class="contenedor">
+        <div class="relative">
+          <Imagen src={s.imagen} alt="" ancho={1600} alto={1000} prioridad={primera} class="aspect-[4/3] w-full rounded-[2rem] object-cover md:aspect-[16/8]" />
+          <div class="tarjeta relative -mt-16 mx-3 p-6 md:absolute md:bottom-8 md:left-8 md:mx-0 md:mt-0 md:max-w-lg md:p-9">
+            {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
+            <h1 class="mt-3 text-[clamp(2.1rem,6vw,3.4rem)] text-primario">{s.titulo}</h1>
+            {s.texto && <p class="mt-4 text-lg opacity-85">{s.texto}</p>}
+            <div class="mt-6 flex flex-wrap gap-3">
+              {c.telefono && (
+                <a class="btn" href={tel(c.telefono)}>
+                  <Icono nombre="telefono" tam={20} /> Llamar
+                </a>
+              )}
+              {s.cta && <a class="btn-sec" href={s.cta.url}>{s.cta.texto}</a>}
+              {!s.cta && c.direccion && (
+                <a class="btn-sec" href={mapa(c.direccion)} rel="noopener" target="_blank">
+                  <Icono nombre="mapa" tam={20} /> Cómo llegar
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+        {s.items.length > 0 && (
+          <ul class="mt-10 flex flex-wrap justify-center gap-3">
+            {s.items.map((it) => (
+              <li class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-bold shadow-sm">
+                <Icono nombre={it.icono} class="text-primario" tam={20} />
+                {it.titulo}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </section>
+  )
+}

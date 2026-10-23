@@ -1,0 +1,24 @@
+---
+// Galería: mosaico con la primera foto grande. Fotos en site.yaml → secciones.galeria.galeria.
+import { seccion, site } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Imagen from '../ui/Imagen.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id} class="bg-primario/[0.06]">
+      <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+      <ul class="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+        {s.galeria.map((foto, i) => (
+          <li class:list={[{ 'col-span-2 row-span-2': i === 0 }]}>
+            <Imagen src={foto} alt={`${site.nombre}, foto ${i + 1}`} ancho={800} alto={800} class="aspect-square h-full w-full rounded-2xl object-cover" />
+          </li>
+        ))}
+      </ul>
+    </Seccion>
+  )
+}

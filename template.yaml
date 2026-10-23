@@ -1,0 +1,13 @@
+# Metadatos de la plantilla para el catálogo de NoExpertise.
+id: negocio-local
+nombre: Negocio local
+descripcion: Web cálida para tiendas, bares y talleres, con horario, fotos y botón de llamar.
+sectores: [tienda, restaurante, taller]
+secciones: [hero, servicios, galeria, horario-ubicacion, testimonios, contacto]
+estilo: calido
+plan_minimo: gratis
+version: 1.0.0
+base: astrowind
+demo_url: https://demo-plantilla-negocio-local.noexpertise.com
+activa: true
+orden: 20

@@ -1,0 +1,39 @@
+/* Negocio local — estilo cálido: letra redondeada, tarjetas muy redondas, fondo crema, botones grandes para llamar. */
+@import "tailwindcss";
+@import "./comun.css";
+@config "../../tailwind.config.mjs";
+
+:root {
+  --fuente-texto: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", "Arial Rounded MT", "Segoe UI", system-ui, sans-serif;
+  --fuente-titulos: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --radio: 1rem; --ritmo: 3.5rem; --ritmo-md: 5.5rem; --ancho: 70rem;
+}
+
+@layer base {
+  body { font-family: var(--fuente-texto); font-size: 1.05rem; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 800; letter-spacing: -0.015em; line-height: 1.1; }
+}
+
+@layer components {
+  .antetitulo { display: inline-block; font-size: .85rem; font-weight: 700; padding: .3rem .85rem; border-radius: 999px; background: color-mix(in srgb, var(--c-acento) 30%, transparent); color: var(--c-primario); }
+  .titulo-seccion { font-size: clamp(1.9rem, 5vw, 2.8rem); margin-top: .75rem; }
+  .titular { max-width: 40rem; margin-bottom: 2.25rem; }
+  .titular--centro { margin-inline: auto; text-align: center; }
+  .titular-texto { margin-top: .9rem; font-size: 1.1rem; opacity: .8; }
+
+  .btn { border-radius: 999px; background: var(--c-primario); color: #fff; font-weight: 700; padding-inline: 1.6rem; box-shadow: 0 6px 0 color-mix(in srgb, var(--c-primario) 60%, #000); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-sec { border-radius: 999px; background: var(--c-acento); color: var(--c-texto); font-weight: 700; padding-inline: 1.6rem; box-shadow: 0 6px 0 color-mix(in srgb, var(--c-acento) 60%, #000); }
+  .tarjeta { border-radius: 1.5rem; background: #fff; box-shadow: 0 1px 0 color-mix(in srgb, var(--c-texto) 8%, transparent), 0 10px 30px -12px color-mix(in srgb, var(--c-primario) 35%, transparent); }
+  .ola { display: block; width: 100%; height: 40px; color: inherit; }
+
+  .cabecera--calida { background: var(--c-fondo); }
+  .cabecera--calida .marca-inicial { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 999px; background: var(--c-primario); color: #fff; font-weight: 800; font-size: 1.25rem; }
+  .cabecera--calida .marca-nombre { font-family: var(--fuente-titulos); font-weight: 800; font-size: 1.2rem; }
+  .cabecera--calida .cabecera-nav a { font-weight: 700; }
+  .cabecera--calida .cabecera-nav a:hover { color: var(--c-primario); }
+  .cabecera--calida .cabecera-cta { box-shadow: none; }
+
+  .pie--calido { background: var(--c-texto); color: var(--c-fondo); border-radius: 2rem 2rem 0 0; }
+  .campo input, .campo textarea { background: #fff; border-radius: .9rem; }
+}

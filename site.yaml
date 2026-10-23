@@ -1,0 +1,93 @@
+# Contenido de la web. Es lo único que rellena la plataforma NoExpertise.
+# Las secciones se muestran en el orden de este fichero. Para ocultar una: activa: false.
+nombre: Horno La Espiga
+eslogan: Pan de masa madre, bollería y café en el centro de Jaca.
+sector: tienda
+logo: ""          # ruta a una imagen en public/ (p. ej. /logo.svg). Vacío = nombre en texto.
+colores:
+  primario: "#b5532b"
+  acento: "#f2b544"
+  fondo: "#fff8ef"
+  texto: "#3b2a20"
+contacto:
+  telefono: "974 36 05 12"
+  email: hola@hornolaespiga.es
+  direccion: Calle Mayor 14, 22700 Jaca (Huesca)
+  horario: "De martes a domingo, de 7:30 a 14:30. Viernes y sábado también de 17:00 a 20:30."
+  whatsapp: "+34 640 36 05 12"
+redes:
+  instagram: https://www.instagram.com/
+  facebook: https://www.facebook.com/
+  linkedin: ""
+menu:
+  - { texto: Qué hacemos, url: "/#servicios" }
+  - { texto: Fotos, url: "/#galeria" }
+  - { texto: Horario, url: "/#horario-ubicacion" }
+  - { texto: Contacto, url: "/#contacto" }
+boton_cabecera: { texto: Encarga tu pan, url: "/#contacto" }
+seo:
+  titulo: Horno La Espiga · Panadería y café en Jaca
+  descripcion: "Panadería artesana en la calle Mayor de Jaca: pan de masa madre, bollería del día, tartas por encargo y café. Abrimos de martes a domingo."
+  tipo: Bakery
+marca_pie: true
+
+secciones:
+  hero:
+    activa: true
+    antetitulo: "Desde 1987 en la calle Mayor"
+    titulo: Pan recién hecho cada mañana
+    texto: "Masa madre, harina de molinos de Aragón y horno de leña. Pasa a por tu barra o siéntate a tomar un café."
+    imagen: /placeholders/hero.svg
+    cta: { texto: Ver horario, url: "/#horario-ubicacion" }
+    items:
+      - { titulo: Masa madre propia, icono: hoja }
+      - { titulo: Café de tueste local, icono: taza }
+      - { titulo: Tartas por encargo, icono: regalo }
+
+  servicios:
+    activa: true
+    antetitulo: Lo nuestro
+    titulo: Qué encontrarás en el horno
+    texto: "Todo se hace aquí, cada día. Si se acaba, se acaba."
+    items:
+      - { titulo: Pan de masa madre, texto: "Hogaza, barra rústica, centeno y espelta. Fermentación de 24 horas.", icono: hoja, imagen: /placeholders/servicio-1.svg }
+      - { titulo: Bollería y dulces, texto: "Cruasanes de mantequilla, trenzas de Almudévar y coca de chicharrones los domingos.", icono: corazon, imagen: /placeholders/servicio-2.svg }
+      - { titulo: Café y almuerzos, texto: "Desayunos con tostada de pan de la casa y tomate. Seis mesas junto al escaparate.", icono: taza, imagen: /placeholders/servicio-3.svg }
+
+  galeria:
+    activa: true
+    antetitulo: Fotos
+    titulo: Así es el horno
+    galeria:
+      - /placeholders/galeria-1.svg
+      - /placeholders/galeria-2.svg
+      - /placeholders/galeria-3.svg
+      - /placeholders/galeria-4.svg
+      - /placeholders/galeria-5.svg
+
+  horario-ubicacion:
+    activa: true
+    antetitulo: Ven a vernos
+    titulo: Horario y cómo llegar
+    texto: "Estamos a dos minutos de la Catedral. Aparcamiento en la plaza de Biscós."
+    imagen: /placeholders/mapa.svg
+    horario:
+      - { dia: Lunes, horas: Cerrado }
+      - { dia: Martes a jueves, horas: "7:30 – 14:30" }
+      - { dia: Viernes y sábado, horas: "7:30 – 14:30 y 17:00 – 20:30" }
+      - { dia: Domingo, horas: "8:00 – 14:00" }
+
+  testimonios:
+    activa: true
+    antetitulo: Opiniones
+    titulo: Lo que dicen nuestros clientes
+    testimonios:
+      - { texto: "La mejor hogaza del Pirineo. Merece la pena la cola del sábado.", autor: Carmen R. }
+      - { texto: "Paramos siempre a desayunar camino de Candanchú. El cruasán, espectacular.", autor: Iñaki L. }
+      - { texto: "Nos hicieron la tarta del cumpleaños de mi hija y fue un éxito.", autor: Lucía M. }
+
+  contacto:
+    activa: true
+    antetitulo: Encargos
+    titulo: ¿Quieres reservar pan o una tarta?
+    texto: "Llámanos o escríbenos por WhatsApp. Los encargos de tartas, con 48 horas de antelación."

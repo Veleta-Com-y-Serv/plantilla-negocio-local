@@ -1,0 +1,51 @@
+---
+// Horario y ubicación: tabla de horario + dirección con enlace a mapas (sin iframe, para que la web vaya rápida).
+import { seccion, site, mapa, tel } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Imagen from '../ui/Imagen.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="grid gap-8 md:grid-cols-2 md:items-stretch">
+        <div class="tarjeta p-6 md:p-10">
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <table class="w-full text-left">
+            <caption class="sr-only">Horario de apertura</caption>
+            <tbody>
+              {s.horario.map((h) => (
+                <tr class="border-b border-dashed border-texto/20 last:border-0">
+                  <th scope="row" class="py-3 pr-4 font-bold">{h.dia}</th>
+                  <td class="py-3 text-right">{h.horas}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="tarjeta flex flex-col overflow-hidden">
+          <Imagen src={s.imagen} alt="Plano de situación" ancho={1000} alto={700} class="aspect-[10/7] w-full object-cover" />
+          <div class="flex flex-1 flex-col gap-4 p-6 md:p-8">
+            <p class="flex gap-3 text-lg font-bold">
+              <Icono nombre="mapa" class="mt-1 shrink-0 text-primario" />
+              {c.direccion}
+            </p>
+            <div class="mt-auto flex flex-wrap gap-3">
+              {c.direccion && (
+                <a class="btn" href={mapa(c.direccion)} rel="noopener" target="_blank">
+                  Cómo llegar
+                </a>
+              )}
+              {c.telefono && <a class="btn-sec" href={tel(c.telefono)}>{c.telefono}</a>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </Seccion>
+  )
+}
