@@ -41,3 +41,5 @@ Antes de dar una orden por buena: `npm run build` sin errores.
 - `hero.items`: etiquetas bajo el hero (solo `titulo` + `icono`). Sin `hero.cta` aparece «Cómo llegar».
 - `servicios.items[].imagen`: foto de cada tarjeta.
 - `horario-ubicacion.horario` [{dia, horas}] e `imagen` (plano); la dirección sale de `contacto.direccion`.
+
+Fotos de partida en public/fotos/ (generadas con IA, sin derechos de terceros); los SVG de public/placeholders/ siguen de respaldo.

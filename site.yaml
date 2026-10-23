@@ -37,7 +37,7 @@ secciones:
     antetitulo: "Desde 1987 en la calle Mayor"
     titulo: Pan recién hecho cada mañana
     texto: "Masa madre, harina de molinos de Aragón y horno de leña. Pasa a por tu barra o siéntate a tomar un café."
-    imagen: /placeholders/hero.svg
+    imagen: /fotos/hero.jpg
     cta: { texto: Ver horario, url: "/#horario-ubicacion" }
     items:
       - { titulo: Masa madre propia, icono: hoja }
@@ -50,20 +50,20 @@ secciones:
     titulo: Qué encontrarás en el horno
     texto: "Todo se hace aquí, cada día. Si se acaba, se acaba."
     items:
-      - { titulo: Pan de masa madre, texto: "Hogaza, barra rústica, centeno y espelta. Fermentación de 24 horas.", icono: hoja, imagen: /placeholders/servicio-1.svg }
-      - { titulo: Bollería y dulces, texto: "Cruasanes de mantequilla, trenzas de Almudévar y coca de chicharrones los domingos.", icono: corazon, imagen: /placeholders/servicio-2.svg }
-      - { titulo: Café y almuerzos, texto: "Desayunos con tostada de pan de la casa y tomate. Seis mesas junto al escaparate.", icono: taza, imagen: /placeholders/servicio-3.svg }
+      - { titulo: Pan de masa madre, texto: "Hogaza, barra rústica, centeno y espelta. Fermentación de 24 horas.", icono: hoja, imagen: /fotos/servicio-1.jpg }
+      - { titulo: Bollería y dulces, texto: "Cruasanes de mantequilla, trenzas de Almudévar y coca de chicharrones los domingos.", icono: corazon, imagen: /fotos/servicio-2.jpg }
+      - { titulo: Café y almuerzos, texto: "Desayunos con tostada de pan de la casa y tomate. Seis mesas junto al escaparate.", icono: taza, imagen: /fotos/servicio-3.jpg }
 
   galeria:
     activa: true
     antetitulo: Fotos
     titulo: Así es el horno
     galeria:
-      - /placeholders/galeria-1.svg
-      - /placeholders/galeria-2.svg
-      - /placeholders/galeria-3.svg
-      - /placeholders/galeria-4.svg
-      - /placeholders/galeria-5.svg
+      - /fotos/galeria-1.jpg
+      - /fotos/galeria-2.jpg
+      - /fotos/galeria-3.jpg
+      - /fotos/galeria-4.jpg
+      - /fotos/galeria-5.jpg
 
   horario-ubicacion:
     activa: true
