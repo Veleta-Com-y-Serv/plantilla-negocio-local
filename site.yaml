@@ -87,6 +87,17 @@ secciones:
       - { texto: "Paramos siempre a desayunar camino de Candanchú. El cruasán, espectacular.", autor: Iñaki L. }
       - { texto: "Nos hicieron la tarta del cumpleaños de mi hija y fue un éxito.", autor: Lucía M. }
 
+  preguntas:
+    activa: true
+    antetitulo: Preguntas
+    titulo: Lo que más nos preguntáis
+    preguntas:
+      - { pregunta: "¿Puedo encargar el pan para que me lo guardéis?", respuesta: "Sí. Llámanos o escríbenos por WhatsApp el día antes y te lo dejamos apartado con tu nombre." }
+      - { pregunta: "¿Hacéis tartas por encargo?", respuesta: "Sí, para cumpleaños y celebraciones. Pídela con dos o tres días de antelación y cuéntanos para cuántas personas es." }
+      - { pregunta: "¿Tenéis pan sin gluten?", respuesta: "No. Trabajamos con harina de trigo, centeno y espelta en el mismo obrador, así que no podemos garantizar que esté libre de trazas." }
+      - { pregunta: "¿Se puede desayunar en el horno?", respuesta: "Sí. Tenemos seis mesas junto al escaparate con café, tostadas de pan de la casa y bollería del día." }
+      - { pregunta: "¿Dónde puedo aparcar?", respuesta: "En la plaza de Biscós, a dos minutos andando del horno." }
+
   contacto:
     activa: true
     antetitulo: Encargos

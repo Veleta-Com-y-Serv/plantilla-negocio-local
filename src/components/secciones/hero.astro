@@ -1,6 +1,7 @@
 ---
 // Hero cálido: foto grande redondeada, tarjeta de bienvenida que la solapa y botones de llamar / cómo llegar.
 import { seccion, site, tel, mapa } from '../../data/site';
+import { altHero } from '../../lib/seo';
 import Imagen from '../ui/Imagen.astro';
 import Icono from '../ui/Icono.astro';
 interface Props { id: string; primera?: boolean }
@@ -14,7 +15,7 @@ const c = site.contacto;
     <section id={id} class="pt-4 pb-12 md:pt-8 md:pb-20">
       <div class="contenedor">
         <div class="relative">
-          <Imagen src={s.imagen} alt="" ancho={1600} alto={1000} prioridad={primera} class="aspect-[4/3] w-full rounded-[2rem] object-cover md:aspect-[16/8]" />
+          <Imagen src={s.imagen} alt={altHero()} ancho={1600} alto={1000} prioridad={primera} class="aspect-[4/3] w-full rounded-[2rem] object-cover md:aspect-[16/8]" />
           <div class="tarjeta relative -mt-16 mx-3 p-6 md:absolute md:bottom-8 md:left-8 md:mx-0 md:mt-0 md:max-w-lg md:p-9">
             {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
             <h1 class="mt-3 text-[clamp(2.1rem,6vw,3.4rem)] text-primario">{s.titulo}</h1>

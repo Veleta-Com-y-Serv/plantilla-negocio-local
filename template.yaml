@@ -3,10 +3,17 @@ id: negocio-local
 nombre: Negocio local
 descripcion: Web cálida para tiendas, bares y talleres, con horario, fotos y botón de llamar.
 sectores: [tienda, restaurante, taller]
-secciones: [hero, servicios, galeria, horario-ubicacion, testimonios, contacto]
+secciones:
+  - { id: hero, nombre: Portada }
+  - { id: servicios, nombre: Servicios }
+  - { id: galeria, nombre: Galería de fotos }
+  - { id: horario-ubicacion, nombre: Horario y ubicación }
+  - { id: testimonios, nombre: Opiniones de clientes }
+  - { id: preguntas, nombre: Preguntas frecuentes }
+  - { id: contacto, nombre: Contacto }
 estilo: calido
 plan_minimo: gratis
-version: 1.3.0
+version: 1.4.0
 base: astrowind
 demo_url: https://demo-plantilla-negocio-local.noexpertise.com
 activa: true
@@ -44,6 +51,12 @@ asistente:
     pregunta: "¿Cómo se llega a tu local? Calle, referencias, aparcamiento…"
     tipo: texto
     campos: [secciones.horario-ubicacion.titulo, secciones.horario-ubicacion.texto]
+  - id: preguntas
+    titulo: "Preguntas frecuentes"
+    pregunta: "¿Qué os preguntan más a menudo? Escribe cada pregunta y lo que respondéis."
+    ayuda: "Si lo prefieres, añádelos luego en Contenido."
+    tipo: lista
+    campos: [secciones.preguntas.preguntas]
   - id: fotos
     titulo: "Tus fotos"
     pregunta: "Pon una foto de portada y, si quieres, alguna más."

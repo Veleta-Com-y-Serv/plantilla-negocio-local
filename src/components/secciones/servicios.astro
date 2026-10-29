@@ -1,6 +1,7 @@
 ---
 // Servicios / carta: tarjetas redondas con imagen y un icono en círculo de color.
 import { seccion } from '../../data/site';
+import { altFicha } from '../../lib/seo';
 import Seccion from '../ui/Seccion.astro';
 import Titular from '../ui/Titular.astro';
 import Imagen from '../ui/Imagen.astro';
@@ -16,7 +17,7 @@ const s = seccion(Astro.props.id);
       <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {s.items.map((it, i) => (
           <li class="tarjeta overflow-hidden">
-            {it.imagen && <Imagen src={it.imagen} alt="" ancho={800} alto={600} class="aspect-[4/3] w-full object-cover" />}
+            {it.imagen && <Imagen src={it.imagen} alt={altFicha(it)} ancho={800} alto={600} class="aspect-[4/3] w-full object-cover" />}
             <div class="relative p-6 pt-10">
               <span class:list={['absolute -top-7 left-6 grid h-14 w-14 place-items-center rounded-full text-white ring-4 ring-white', i % 2 ? 'bg-acento' : 'bg-primario']}>
                 <Icono nombre={it.icono} tam={26} />
