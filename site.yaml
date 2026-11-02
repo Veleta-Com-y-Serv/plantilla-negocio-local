@@ -51,9 +51,36 @@ secciones:
     titulo: Qué encontrarás en el horno
     texto: "Todo se hace aquí, cada día. Si se acaba, se acaba."
     items:
-      - { titulo: Pan de masa madre, texto: "Hogaza, barra rústica, centeno y espelta. Fermentación de 24 horas.", icono: hoja, imagen: /fotos/servicio-1.jpg }
-      - { titulo: Bollería y dulces, texto: "Cruasanes de mantequilla, trenzas de Almudévar y coca de chicharrones los domingos.", icono: corazon, imagen: /fotos/servicio-2.jpg }
-      - { titulo: Café y almuerzos, texto: "Desayunos con tostada de pan de la casa y tomate. Seis mesas junto al escaparate.", icono: taza, imagen: /fotos/servicio-3.jpg }
+      - titulo: Pan de masa madre
+        texto: "Hogaza, barra rústica, centeno y espelta. Fermentación de 24 horas."
+        icono: hoja
+        imagen: /fotos/servicio-1.jpg
+        detalle: |
+          El pan de la casa nace de una masa madre que se alimenta todos los días y que lleva con nosotros desde que abrimos el horno. Trabajamos con harinas de molinos de Aragón y dejamos que la masa fermente despacio, sin prisas, para que la miga quede abierta, la corteza crujiente y el sabor profundo.
+
+          Cada mañana sale una hogaza grande de corteza oscura, barras rústicas para el bocadillo, pan de centeno y pan de espelta. Todas se cuecen en el horno de leña y se venden el mismo día, todavía tibias a primera hora. Si buscas algo concreto, avísanos y lo apartamos.
+
+          Es un pan que aguanta bien varios días en casa: guárdalo en una bolsa de tela, con el corte hacia abajo, y recupera su punto con unos minutos de horno. Sirve igual para la tostada del desayuno que para acompañar un guiso o una tabla de queso.
+      - titulo: Bollería y dulces
+        texto: "Cruasanes de mantequilla, trenzas de Almudévar y coca de chicharrones los domingos."
+        icono: corazon
+        imagen: /fotos/servicio-2.jpg
+        detalle: |
+          La bollería se hace a mano cada madrugada, con mantequilla de verdad y masas que reposan el tiempo necesario. Son piezas pensadas para el desayuno, la merienda o el postre del domingo, y se terminan según avanza la mañana.
+
+          Los cruasanes de mantequilla salen del horno en tandas, para que siempre haya alguno recién hecho. Las trenzas de Almudévar son el dulce de toda la vida de la casa, con su azúcar por encima, y la coca de chicharrones llega los domingos, cuando la gente de Jaca baja a por ella.
+
+          También preparamos tartas y dulces por encargo para cumpleaños, comuniones y celebraciones en casa. Cuéntanos para cuántas personas es y qué os gusta, y te proponemos algo sencillo y bien hecho. Conviene pedirlo con unos días de antelación, sobre todo en fines de semana.
+      - titulo: Café y almuerzos
+        texto: "Desayunos con tostada de pan de la casa y tomate. Seis mesas junto al escaparate."
+        icono: taza
+        imagen: /fotos/servicio-3.jpg
+        detalle: |
+          En el rincón junto al escaparate tenemos seis mesas para quien quiera quedarse un rato. Es un sitio pequeño y tranquilo, pensado para desayunar sin prisa o parar a media mañana, con el olor del horno de fondo.
+
+          El desayuno de la casa es una tostada de nuestro pan con tomate y aceite, acompañada de un café con leche bien hecho. Para el almuerzo hay bocadillos con pan recién cortado, pensados para quien sube a la montaña o viene de camino a las pistas, y una pieza de bollería para el final.
+
+          Si vais en grupo, lo mejor es avisar por teléfono para reservar las mesas. Y si prefieres llevártelo, te lo preparamos para llevar: el café en vaso, el bocadillo envuelto y el pan listo para el camino.
 
   galeria:
     activa: true
